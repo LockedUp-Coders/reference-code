@@ -28,11 +28,6 @@ const UserSchema = new Mongoose.Schema({
     required: true,
   },
 
-  posts: {
-    type: Number,
-    default: 0,
-  },
-
   otpVerified: {
     type: Boolean,
     default: false,

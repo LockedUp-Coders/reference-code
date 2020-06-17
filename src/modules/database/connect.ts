@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import logger from "../../logging/logger";
+import logger from "../logging/logger";
 
 class Database {
   static connect() {

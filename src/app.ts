@@ -1,7 +1,7 @@
 import express from "express";
 import compression from "compression";
 import cors from "cors";
-import morgan from "./logging/morgan";
+import morgan from "./modules/logging/morgan";
 import database from "./modules/database/connect";
 
 /**

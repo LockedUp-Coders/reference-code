@@ -1,6 +1,6 @@
 import bcrypt from "bcrypt";
 import User from "./schema";
-import logger from "../../logging/logger";
+import logger from "../logging/logger";
 import {
   ControllerResponse,
   SignupStruct,
