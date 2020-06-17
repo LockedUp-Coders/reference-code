@@ -10,7 +10,7 @@
     "dev": "nodemon --exec ts-node src/server.ts",
     "start": "node dist/server.js",
     "lint": "standardx **/**/*.ts --fix",
-    "coverage": "tsc && nyc --reporter=lcov mocha dist/tests/* && codecov"
+    "coverage": "tsc && nyc --reporter=lcov npm run test* && codecov"
   },
   "repository": {
     "type": "git",
