@@ -1,0 +1,24 @@
+language: node_js
+
+services:
+  - docker
+  - mongodb
+
+node_js:
+  - 10
+
+install:
+  - npm install
+  - npm install typescript
+
+script:
+  - npm run lint
+  - npm run build-nolint
+  - npm run coverage
+
+after_success:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker build -t yashkumarverma/st-tanmay-project .
+  - docker push yashkumarverma/st-tanmay-project
+  - npm i -g surge
+  - surge --project ./coverage/lcov-report --domain ykv-st-tanmay-cov.surge.sh

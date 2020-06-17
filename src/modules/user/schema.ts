@@ -31,13 +31,16 @@ const UserSchema = new Mongoose.Schema({
   posts: {
     type: Number,
     default: 0,
-    required: false,
   },
 
   otpVerified: {
     type: Boolean,
     default: false,
-    required: false,
+  },
+
+  lastOtp: {
+    type: String,
+    default: "-1",
   },
 });
 
